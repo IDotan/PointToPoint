@@ -8,7 +8,7 @@ Or
 Use the  compiled Point to Point puzzle.exe in the rar file.
 
 ## Puzzle rules
-Make sure every tile corner will touch only other corners of the same color as it self.
+Make sure every tile's corner will touch only other corners of the same color as it self.
 
 ## How to play
 Use the mouse to pick and move tiles.  
