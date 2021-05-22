@@ -7,6 +7,6 @@ Make sure every tile corner will touch only other corners of the same color as i
 
 ## How to play
 Use the mouse to pick and move tiles.  
-Spin tiles using the mouse wheel  or keyboard left and right
+Spin tiles using the mouse wheel  or keyboard left and right.
 
-![](https://raw.githubusercontent.com/IDotan/PointToPoint/main/sample.png)
+![screenshot](https://raw.githubusercontent.com/IDotan/PointToPoint/main/sample.png)
