@@ -188,7 +188,7 @@ class PointGame:
         width = int(self.width * 0.7)
         x = int(self.height * 0.01)
         y = int(self.width * 0.07)
-        font = pygame.font.SysFont("comicsans", int(self.height * 0.12))
+        font = pygame.font.Font(None, int(self.height * 0.12))
         self.__blit_text(text, width, x, y, font)
 
     def __rules(self):
@@ -200,20 +200,20 @@ class PointGame:
         width = self.width - 5
         x = int(self.height * 0.01)
         y = int(self.width * 0.01)
-        font = pygame.font.SysFont("comicsans", int(self.height * 0.08))
+        font = pygame.font.Font(None, int(self.height * 0.08))
         self.clickable[0][1][0], self.clickable[0][1][1] = font.size(text)
         self.__blit_text(text, width, x, y, font)
 
     def __credit(self):
         """render credit watermark"""
         text = ['Created by:', 'linkedin.com/in/IDotan']
-        font = pygame.font.SysFont("comicsans", int(self.height * 0.06))
+        font = pygame.font.Font(None, int(self.height * 0.06))
         width, _ = font.size(text[1])
-        x = int(self.width * 0.01)
-        y = self.height - int(self.height * 0.09)
         fw, fh = font.size(text[1])
         self.clickable[1][1][0] = fw
         self.clickable[1][1][1] = self.height - fh * 2
+        x = int(self.width * 0.01)
+        y = self.clickable[1][1][1] - self.height * 0.01
         self.__blit_text(text, width, x, y, font, color=(0, 122, 204))
 
     def __blit_hint(self):
@@ -222,7 +222,7 @@ class PointGame:
         width = self.buttons[0][1][2]
         x = self.buttons[0][1][0]
         y = self.buttons[1][1][1] + int(self.height * 0.2)
-        font = pygame.font.SysFont("comicsans", int(width * 0.2))
+        font = pygame.font.Font(None, int(width * 0.2))
         self.__blit_text(text, width, x, y, font, True)
 
     def __create_clickable_data(self):
