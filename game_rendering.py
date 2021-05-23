@@ -201,7 +201,8 @@ class PointGame:
         x = int(self.height * 0.01)
         y = int(self.width * 0.01)
         font = pygame.font.Font(None, int(self.height * 0.08))
-        self.clickable[0][1][0], self.clickable[0][1][1] = font.size(text)
+        fw, fh = font.size(text)
+        self.clickable[0][1][0], self.clickable[0][1][1] = fw + x, fh
         self.__blit_text(text, width, x, y, font)
 
     def __credit(self):
@@ -210,9 +211,9 @@ class PointGame:
         font = pygame.font.Font(None, int(self.height * 0.06))
         width, _ = font.size(text[1])
         fw, fh = font.size(text[1])
-        self.clickable[1][1][0] = fw
-        self.clickable[1][1][1] = self.height - fh * 2
         x = int(self.width * 0.01)
+        self.clickable[1][1][0] = fw + x
+        self.clickable[1][1][1] = self.height - fh * 2
         y = self.clickable[1][1][1] - self.height * 0.01
         self.__blit_text(text, width, x, y, font, color=(0, 122, 204))
 
