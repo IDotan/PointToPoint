@@ -184,7 +184,7 @@ class PointGame:
         """render the puzzle rules"""
         text = ['Rotate and move the tiles so every  tile\'s corner will touch the same color as it self.',
                 '\n',
-                'Adjust the tiles using drag and drop, rotate with mousewheel or keyboard left and right.']
+                'Adjust the tiles using drag and drop, rotate with the mousewheel or keyboard\'s left and right.']
         width = int(self.width * 0.7)
         x = int(self.height * 0.01)
         y = int(self.width * 0.07)
@@ -196,7 +196,7 @@ class PointGame:
         if self.rules_stats:
             text = 'Back'
         else:
-            text = 'Click to show rules'
+            text = 'How to play'
         width = self.width - 5
         x = int(self.height * 0.01)
         y = int(self.width * 0.01)
