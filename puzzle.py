@@ -107,12 +107,8 @@ class PuzzleTiles:
                 return False
 
         # second main color across
-        second = False
-        if self.trios[0] == self.trios[3] != center:
-            second = True
-        elif self.trios[1] == self.trios[4] != center:
-            second = True
-        if second is False:
+        if (self.trios[0] != self.trios[3] and self.trios[3] == center) or \
+                (self.trios[1] != self.trios[4] and self.trios[1] == center):
             return False
 
         return True
